@@ -1,17 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Fase 03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Aluno</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Meu Perfil</h1>
+    <header>
+        <h1>Perfil do Aluno</h1>
+        <nav>
+            <a href="#info">Informações</a>
+            <a href="#ucs">UCs</a>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#profissional">Perfil Profissional</a>
+            <a href="#links">Links</a>
+        </nav>
+    </header>
 
-        <div class="secao">
+    <main>
+        <section class="card">
+            <h2>Meus Perfis de Imagem</h2>
+            <div class="galeria">
             <a href="https://docs.google.com/drawings/d/e/2PACX-1vRezabvOTzy7RzT4Q5euv2kkZbuYCohz0bB0sXxIuoiYjD0WhG4PHoOO5CPx_su0ss0uaMBpR7dbvgZ/pub?w=960&h=720" target="_blank">
                 <img src="https://docs.google.com/drawings/d/e/2PACX-1vRezabvOTzy7RzT4Q5euv2kkZbuYCohz0bB0sXxIuoiYjD0WhG4PHoOO5CPx_su0ss0uaMBpR7dbvgZ/pub?w=960&h=720" alt="Foto 1">
             </a>
@@ -21,59 +33,63 @@
            <a href="https://docs.google.com/drawings/d/e/2PACX-1vT2IHiZh2nDD2zmUaENRk0VXfC_jXptXA791-Vi2fMXaiffSreeWbfujuW8Kdy6O-ky2FoLiXfGWe3K/pub?w=688&h=687" target="_blank">
                 <img src="https://docs.google.com/drawings/d/e/2PACX-1vT2IHiZh2nDD2zmUaENRk0VXfC_jXptXA791-Vi2fMXaiffSreeWbfujuW8Kdy6O-ky2FoLiXfGWe3K/pub?w=688&h=687" alt="Foto 3">
             </a>
-        </div>
+            </div>
+        </section>
 
-        <div class="secao">
+        <section id="info" class="card">
             <h2>Informações Pessoais</h2>
-            <p>Nome: Jonatas Natanael Antunes Oliveira</p>
-            <p>RA: 1232021950</p>
-            <p>Curso: Análise e Desenvolvimento de Sistemas - 4º semestre</p>
-            <p>Endereço: Rua Ercilia Siqueira - Taquaril - Belo Horizonte - MG</p>
-            <p>CPF: <input type="text" id="cpf" placeholder="000.000.000-00" onblur="validarCPF()"></p>
-<p>E-mail: <input type="email" id="email" value="jonatas112natanael@gmail.com" onblur="validarEmail()"></p>
-        </div>
+            <p><strong>Nome:</strong> Jonatas Natanael Antunes Oliveira</p>
+            <p><strong>RA:</strong> 1232021950</p>
+            <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas - 4º semestre</p>
+            <p><strong>Endereço:</strong> Rua Ercilia Siqueira - Taquaril - Belo Horizonte - MG</p>
+            <p><strong>CPF:</strong> <input type="text" id="cpf" placeholder="000.000.000-00" onblur="validarCPF()"></p>
+            <p><strong>E-mail:</strong> <input type="email" id="email" value="jonatas112natanael@gmail.com" onblur="validarEmail()"></p>
+        </section>
 
-        <div class="secao">
+        <section id="ucs" class="card">
             <h2>UCs já cursadas</h2>
-            <ul>
+            <ul id="lista-ucs">
                 <li>Inovação, sustentabilidade e competitividade empresarial</li>
                 <li>Modelos, métodos e técnicas da engenharia de software</li>
                 <li>Ambientes computacionais e conectividade</li>
                 <li>Sistemas computacionais e segurança</li>
             </ul>
-<button onclick="adicionarUC()">Adicionar nova UC</button>
-        </div>
+            <button onclick="adicionarUC()">➕ Adicionar nova UC</button>
+        </section>
 
-        <div class="secao">
-            <h2>Sobre mim</h2>
+        <section id="sobre" class="card">
+            <h2>Sobre Mim</h2>
     <p>Sou apaixonado por tecnologia, curiosidades e desafios. Nos meus momentos livres, gosto de ouvir música, descansar, andar de moto e aproveitar bons momentos com minha família e amigos. Também gosto de explorar novos lugares, especialmente quando envolve uma boa gastronomia.</p>
-        </div>
+        </section>
 
-        <div class="secao">
+        <section id="profissional" class="card">
             <h2>Perfil Acadêmico/Profissional</h2>
                 <p>
         Atualmente sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> pelo UniBH, com formação técnica em <strong>Administração</strong> pelo Sebrae.
         Possuo mais de 6 anos de experiência no setor de <strong>Tecnologia da Informação e Marketing</strong>, atuando nas áreas de atendimento, pós-venda, gestão de processos,
         relacionamento com clientes e suporte técnico. Estou sempre em busca de desenvolvimento profissional e aprimoramento técnico.
     </p>
-        </div>
+        </section>
 
-        <div class="secao">
+        <section id="links" class="card">
             <h2>Meus Links</h2>
             <ul>
                 <li><a href="https://www.linkedin.com/in/jonatas-oliveira-35a37077/" target="_blank">🔗 LinkedIn</a></li>
                 <li><a href="https://github.com/Jonatas112" target="_blank">💻 GitHub</a></li>
             </ul>
-<button onclick="adicionarUC()">Adicionar nova UC</button>
-        </div>
-    </div>
+        </section>
+
+        <section class="card">
+            <h2>Adicionar mais informações sobre mim</h2>
+            <textarea id="novaDescricao" rows="4" placeholder="Digite aqui..."></textarea><br>
+            <button onclick="adicionarDescricao()">Adicionar Descrição</button>
+            <div id="descricaoAdicional"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Jonatas Oliveira</p>
+    </footer>
 
 </body>
 </html>
-
-<div class="secao">
-    <h2>Adicionar mais informações sobre mim</h2>
-    <textarea id="novaDescricao" rows="4" placeholder="Digite aqui..."></textarea><br>
-    <button onclick="adicionarDescricao()">Adicionar Descrição</button>
-    <div id="descricaoAdicional"></div>
-</div>
